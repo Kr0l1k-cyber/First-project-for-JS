@@ -1,1 +1,2 @@
-alert ('Heelo my first script')
+console.log ('Первое сообщение в консоли');
+alert ('Heelo my first script');
