@@ -1,8 +1,7 @@
-console.log ('Первое сообщение в консоли');
-alert ('Heelo my first script');
-const title = 1;
-let screens = 4;
-const screenPrice = 2;
-let rollback = 5;
-const fullPrice = 3;
-let adaptive = 6;
+
+const title = 'Мой первый проэкт';
+let screens = 'Простые, Сложные, Интерактивные';
+const screenPrice = 1000;
+let rollback = 71;
+const fullPrice = 10000;
+let adaptive = true;
