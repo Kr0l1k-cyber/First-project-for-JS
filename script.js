@@ -16,4 +16,5 @@ const servicePrice2 = +prompt('Сколько это будет стоить?');
 
 const fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
 
-console.log(fullPrice);
+const servicePercentPrice =  (Math.ceil(parseFloat(fullPrice * (100 - 11))) / 100);
+console.log(servicePercentPrice);
