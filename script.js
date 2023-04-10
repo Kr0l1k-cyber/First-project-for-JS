@@ -8,14 +8,12 @@ let servicePrice1 = +prompt('Сколько это будет стоить?');
 let service2 = prompt('Какой дополнительный тип услуги нужен?');
 let servicePrice2 = +prompt('Сколько это будет стоить?');
 let roolback =10;
-let fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
-let servicePercentPrice = fullPrice - (fullPrice * (roolback / 100));
-
+// let fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
+// let servicePercentPrice = fullPrice - (fullPrice * (roolback / 100));
 
 const showTypeof = function(variable) {
     console.log(variable, typeof variable);
 }
-
 const getRoolBackMessage = function(price) {
     if (price >= 30000) {
         return "Даем скидку в 10%"
@@ -27,12 +25,16 @@ const getRoolBackMessage = function(price) {
         return "Что то пошло не так"
     }
 }
-
+// Решаем задачки
 const getAllServicePrices = function(dopPrice1, dopPrice2) {
     return dopPrice1 + dopPrice2
 }
+function getFullPrice(a, b) {
+    return a + b
+}
 
-let allServicePrices =getAllServicePrices(servicePrice1, servicePrice2);
+let allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
+let fullPrice = getFullPrice(scrrenPrice, allServicePrices)
 
 showTypeof(title);
 showTypeof(scrrenPrice);
@@ -40,6 +42,7 @@ showTypeof(adaptiv);
 
 console.log(allServicePrices);
 console.log(getRoolBackMessage(fullPrice));
+console.log(fullPrice);
 console.log(typeof title);
 console.log(typeof scrrenPrice);
 console.log(typeof adaptiv);
