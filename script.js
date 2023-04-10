@@ -11,6 +11,7 @@ let roolback =10;
 let fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
 let servicePercentPrice = fullPrice - (fullPrice * (roolback / 100));
 
+
 const showTypeof = function(variable) {
     console.log(variable, typeof variable);
 }
@@ -27,12 +28,17 @@ const getRoolBackMessage = function(price) {
     }
 }
 
+const getAllServicePrices = function(dopPrice1, dopPrice2) {
+    return dopPrice1 + dopPrice2
+}
 
+let allServicePrices =getAllServicePrices(servicePrice1, servicePrice2);
 
 showTypeof(title);
 showTypeof(scrrenPrice);
 showTypeof(adaptiv);
 
+console.log(allServicePrices);
 console.log(getRoolBackMessage(fullPrice));
 console.log(typeof title);
 console.log(typeof scrrenPrice);
