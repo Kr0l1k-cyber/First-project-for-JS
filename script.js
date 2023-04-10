@@ -1,35 +1,24 @@
 'use strict';
-// const title = prompt('Как называется Ваш проект?')
+let title = prompt('Как называется Ваш проект?');
+let screens = prompt('Какие типы экранов нужно разработать?');
+let scrrenPrice = +prompt('Сколько будет стоить данная работа?');
+let adaptiv = confirm('Нужен ли адаптив на сайте?');
+let service1 = prompt('Какой дополнительный тип услуги нужен?');
+let servicePrice1 = +prompt('Сколько это будет стоить?');
+let service2 = prompt('Какой дополнительный тип услуги нужен?');
+let servicePrice2 = +prompt('Сколько это будет стоить?');
+let roolback =10;
+let fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
 
-// const screens = prompt('Какие типы экранов нужно разработать?')
+let servicePercentPrice = fullPrice - (fullPrice * (roolback / 100));
 
-const scrrenPrice = +prompt('Сколько будет стоить данная работа?')
-
-// const adaptiv = confirm('Нужен ли адаптив на сайте?')
-// console.log(title, screens, scrrePrice, adaptiv);
-// //расчте стоимости
-
-// const service1 = prompt('Какой дополнительный тип услуги нужен?');
-const servicePrice1 = +prompt('Сколько это будет стоить?');
-// const service2 = prompt('Какой дополнительный тип услуги нужен?');
-const servicePrice2 = +prompt('Сколько это будет стоить?');
-
-const fullPrice = Number(scrrenPrice + servicePrice1 + servicePrice2);
-
-const servicePercentPrice = Math.ceil((parseFloat(fullPrice * (100 - 11))) / 100);
-console.log(servicePercentPrice);
-
-switch (true) {
-    case servicePercentPrice > 30000:
-        console.log('Даем скидку в 10%');
-        break
-    case 15000 < servicePercentPrice && servicePercentPrice < 30000:
-        console.log('Даем скидку в 5%');
-        break
-    case 0 < servicePercentPrice && servicePercentPrice < 15000:
-        console.log('Скидка не предусмотрена');
-        break
-    default:
-        console.log('Что то пошло не так');
+if (fullPrice >= 30000) {
+    console.log("Даем скидку в 10%");
+} else if (fullPrice >= 15000 && fullPrice < 30000) {
+    console.log("Даем скидку в 5%");
+} else if (fullPrice >= 0 && fullPrice < 15000) {
+    console.log("Скидка не предусмотрена");
+} else {
+    console.log("Что то пошло не так");
 }
 
