@@ -1,13 +1,14 @@
 'use strict';
+
 let title = prompt('Как называется Ваш проект?', 'Калькулятор верстки');
 let screens = prompt('Какие типы экранов нужно разработать?', 'Простые сложные');
-let screenPrice = +prompt('Сколько будет стоить данная работа?', 150000);
+let screenPrice = +prompt('Сколько будет стоить данная работа?', 15000);
 let adaptive = confirm('Нужен ли адаптив на сайте?');
 
-let service1 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice1 = +prompt('Сколько это будет стоить?');
-let service2 = prompt('Какой дополнительный тип услуги нужен?');
-let servicePrice2 = +prompt('Сколько это будет стоить?');
+// let service1 = prompt('Какой дополнительный тип услуги нужен?');
+// let servicePrice1 = +prompt('Сколько это будет стоить?');
+// let service2 = prompt('Какой дополнительный тип услуги нужен?');
+// let servicePrice2 = +prompt('Сколько это будет стоить?');
 
 let roolback =10;
 let allServicePrices;
@@ -15,7 +16,13 @@ let fullPrice;
 let servicePercentPrice;
 
 const getAllServicePrices = function () {
-    return servicePrice1 + servicePrice2
+    let sum = 0
+
+    for (let i = 0; i < 2; i++){
+        sum += +prompt('Сколько это будет стоить?')
+    }
+    return sum
+    // return servicePrice1 + servicePrice2
 }
 
 const showTypeof = function(variable) {
@@ -23,7 +30,7 @@ const showTypeof = function(variable) {
 }
 
 const getFullPrice = function () {
-    return screenPice + allServicePrices
+    return screenPrice + allServicePrices
 }
 
 const getServicePercentPrices = function () {
@@ -52,8 +59,8 @@ title = getTitle();
 servicePercentPrice = getServicePercentPrices()
 
 showTypeof(title);
-showTypeof(scrrenPrice);
-showTypeof(adaptiv);
+showTypeof(screenPrice);
+showTypeof(adaptive);
 
 console.log("allServicePrices", allServicePrices);
 
@@ -64,3 +71,5 @@ console.log(servicePercentPrice);
 console.log(typeof title);
 console.log(typeof scrrenPrice);
 console.log(typeof adaptiv);
+
+console.log("Стоимость верстки экранов" + screenPrice + " юани" + "стоимость разработки экрана" + "юани");
