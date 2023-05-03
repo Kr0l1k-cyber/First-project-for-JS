@@ -80,14 +80,12 @@ showTypeof(title);
 showTypeof(screenPrice);
 showTypeof(adaptive);
 
-console.log("allServicePrices", allServicePrices);
-
 console.log(allServicePrices);
 console.log(getRoolBackMessage(fullPrice));
 console.log(fullPrice);
 console.log(servicePercentPrice);
 console.log(typeof title);
-console.log(typeof scrrenPrice);
-console.log(typeof adaptiv);
+console.log(typeof screenPrice);
+console.log(typeof adaptive);
 
 console.log("Стоимость верстки экранов" + screenPrice + " юани" + "стоимость разработки экрана" + "юани");
