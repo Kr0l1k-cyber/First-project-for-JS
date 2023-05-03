@@ -2,7 +2,7 @@
 
 let title = prompt('Как называется Ваш проект?', 'Калькулятор верстки');
 let screens = prompt('Какие типы экранов нужно разработать?', 'Простые сложные');
-// let screenPrice = +prompt('Сколько будет стоить данная работа?', 15000);
+let screenPrice
 let adaptive = confirm('Нужен ли адаптив на сайте?');
 
 // let service1 = prompt('Какой дополнительный тип услуги нужен?');
@@ -10,7 +10,6 @@ let adaptive = confirm('Нужен ли адаптив на сайте?');
 // let service2 = prompt('Какой дополнительный тип услуги нужен?');
 // let servicePrice2 = +prompt('Сколько это будет стоить?');
 
-let screenPrice
 let roolback =10;
 let allServicePrices;
 let fullPrice;
@@ -20,10 +19,16 @@ const getAllServicePrices = function () {
     let sum = 0
 
     for (let i = 0; i < 2; i++){
-        sum += +prompt('Сколько это будет стоить?')
+        let input;
+        do {
+            input = +prompt('Сколько это будет стоить?')
+        } while (isNaN(input));
+
+        sum += input;
+
     }
-    return sum
-    // return servicePrice1 + servicePrice2
+    
+    return sum    
 }
 
 const getScreenPtice = function () {
