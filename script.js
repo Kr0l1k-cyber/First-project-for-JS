@@ -35,8 +35,9 @@ const getScreenPtice = function () {
     let sum = 0;
     let input;
     do {
-        input = +prompt('Сколько будет стоить данная работа?', 15000);
-    } while (isNaN(input));
+        input = prompt('Сколько будет стоить данная работа?', 15000);
+        input = input.replace(/\s+/g, '');
+    } while (isNaN(parseFloat(input)));
 
     sum += +input;
     return sum;
